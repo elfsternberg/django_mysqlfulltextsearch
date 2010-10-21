@@ -94,7 +94,7 @@ some... interesting... problems with parameter quotation.)
 Provide means for using a SearchManager to access indices on joined
 tables, for example:
 
-    Author.objects.search("The Metamorphosis", "book__title")
+    Author.objects.search("The Metamorphosis", ("book__title",))
 
 -- Insane
 
