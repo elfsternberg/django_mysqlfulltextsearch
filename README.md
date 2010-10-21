@@ -30,39 +30,39 @@ Standard Usage:
 
 Create the index.  For the model "book" in the app "Books":
 
-./manage dbshell
-> CREATE FULLTEXT INDEX book_title on books_book (title, summary)
+ ./manage dbshell
+ > CREATE FULLTEXT INDEX book_title on books_book (title, summary)
 
 Or via South:
 
-def forwards(self, orm):
-    db.execute('CREATE FULLTEXT INDEX book_text_index ON books_book (title, summary)')
+ def forwards(self, orm):
+     db.execute('CREATE FULLTEXT INDEX book_text_index ON books_book (title, summary)')
 
 Using the index:
 
-from mysqlfulltextsearch import SearchManager
-class Books:
-    ...
-    objects = SearchManager()
+ from mysqlfulltextsearch import SearchManager
+ class Books:
+     ...
+     objects = SearchManager()
+ 
+ books = Book.objects.search('The Metamorphosis', ('title', 'summary')).order_by('-relevance')
 
-books = Book.objects.search('The Metamorphosis', ('title', 'summary')).order_by('-relevance')
-
-> books[0].title
-"The Metamorphosis"
-> books[0].author
-"Franz Kafka"
-> books[0].relevance
-9.4
+ > books[0].title
+ "The Metamorphosis"
+ > books[0].author
+ "Franz Kafka"
+ > books[0].relevance
+ 9.4
 
 If there is only one index for the table, the fields do not need to be
 specified, the SearchQuerySet object can find it automatically:
 
-from mysqlfulltextsearch import SearchManager
-class Books:
-    ...
-    objects = SearchManager()
+ from mysqlfulltextsearch import SearchManager
+ class Books:
+     ...
+     objects = SearchManager()
 
-books = Book.objects.search('The Metamorphosis').order_by('-relevance')
+ books = Book.objects.search('The Metamorphosis').order_by('-relevance')
 
 
 
