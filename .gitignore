@@ -1,0 +1,10 @@
+*.pyc
+*.rej
+*.orig
+*.pyo
+*#
+.#*
+.DS_Store
+*~
+*.xcf
+build/
