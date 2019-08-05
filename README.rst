@@ -1,3 +1,8 @@
+![Language: Haskell](https://img.shields.io/badge/language-Python-yellowgreen.svg)
+![Framework: Django](https://img.shields.io/badge/language-Django-yellowgreen.svg)
+![Topic: Full Text Search](https://img.shields.io/badge/topic-Full_Text_Search-red.svg)
+![Status: Unmaintained](https://img.shields.io/badge/status-Unmaintained-red.svg)
+
 django-mysqlfulltextsearch
 ==============================
 
@@ -101,3 +106,10 @@ tables, for example:
 Provide for a way to have FULLTEXT search indices specified in a
 model's Meta class, and have syncdb or south pick up that information
 and do the right thing with it.
+
+License:
+--------
+
+This Boggle™ solver is Copyright [Elf M. Sternberg](https://elfsternberg.com) (c) 2019, 
+and licensed with the Mozilla Public License vers. 2.0.  A copy of the
+license file is included in the root folder.
