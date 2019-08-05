@@ -1,4 +1,4 @@
-![Language: Haskell](https://img.shields.io/badge/language-Python-yellowgreen.svg)
+![Language: Python](https://img.shields.io/badge/language-Python-yellowgreen.svg)
 ![Framework: Django](https://img.shields.io/badge/language-Django-yellowgreen.svg)
 ![Topic: Full Text Search](https://img.shields.io/badge/topic-Full_Text_Search-red.svg)
 ![Status: Unmaintained](https://img.shields.io/badge/status-Unmaintained-red.svg)
